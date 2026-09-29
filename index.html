@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="description" content="格物泰克（Gowotex / gowotex.com）——由百奥泰国际会议（BIT Congress）核心团队二次创业设立，国际会议 · 国际人才 · 城市产业的全链路服务生态平台。">
+<meta name="keywords" content="格物泰克,Gowotex,gowotex,国际会议品牌,国际人才引进,会议情报,会议策划,会议全案代运营,展中会,B2B会议,B2G会议,演讲局,城市会展顾问,政府招商,国际项目对接,BIT Congress">
+<title>格物泰克 Gowotex｜国际会议 · 国际人才 · 城市产业生态平台</title>
+<link rel="icon" href="assets/logo-mark.jpg" type="image/jpeg">
+<style>
+/* ============ 设计令牌 ============ */
+:root{
+  --navy:#0A2342;          /* 深藏蓝-主色 */
+  --navy-2:#0E2E57;
+  --blue:#145DA0;          /* 主蓝 */
+  --blue-2:#2E86C1;        /* 亮蓝 */
+  --gold:#f5c518;          /* 金黄-主链接/强调色（手册规范） */
+  --gold-2:#FFD766;        /* 浅金 */
+  --bg:#FFFFFF;
+  --bg-2:#F4F7FB;          /* 浅底 */
+  --line:#E4E9F0;
+  --text:#2C3E50;
+  --text-2:#5D6D7E;
+  --white:#FFFFFF;
+  --radius:14px;
+  --shadow:0 10px 40px rgba(10,35,66,.10);
+  --shadow-lg:0 24px 60px rgba(10,35,66,.16);
+  --font:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+  --font-en:"Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{width:min(1200px,92%);margin:0 auto}
+section{padding:88px 0;position:relative}
+.section-tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;letter-spacing:3px;color:var(--blue);font-weight:600;text-transform:uppercase}
+.section-tag::before{content:"";width:28px;height:2px;background:var(--gold)}
+.section-title{font-size:clamp(28px,4vw,40px);font-weight:800;color:var(--navy);margin:12px 0 14px;line-height:1.25}
+.section-sub{font-size:16px;color:var(--text-2);max-width:800px}
+.center{text-align:center}
+.center .section-sub{margin:0 auto}
+.gold-line{width:64px;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2));border-radius:2px;margin:14px auto 22px}
+.note{font-size:12px;color:var(--text-2);line-height:1.8}
+
+/* ============ 顶部导航 ============ */
+header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,35,66,.92);backdrop-filter:blur(12px);transition:all .35s;border-bottom:1px solid rgba(255,255,255,.08)}
+header.scrolled{background:rgba(8,26,50,.97);box-shadow:0 4px 30px rgba(0,0,0,.25)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{width:46px;height:46px;object-fit:contain;border-radius:8px;background:#fff;padding:3px}
+.brand-text{display:flex;flex-direction:column;line-height:1.2}
+.brand-text b{color:#fff;font-size:19px;letter-spacing:1px}
+.brand-text span{color:var(--gold-2);font-size:11px;letter-spacing:2px;font-family:var(--font-en);font-weight:600}
+nav.main-nav{display:flex;gap:4px}
+nav.main-nav a{color:rgba(255,255,255,.82);font-size:15px;padding:10px 12px;border-radius:8px;transition:.25s;font-weight:500}
+nav.main-nav a:hover,nav.main-nav a.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.lang-switch{display:flex;border:1px solid rgba(255,255,255,.3);border-radius:20px;overflow:hidden}
+.lang-switch button{background:transparent;border:none;color:rgba(255,255,255,.75);font-size:13px;padding:5px 12px;cursor:pointer;transition:.2s;font-family:var(--font)}
+.lang-switch button.active{background:var(--gold);color:var(--navy);font-weight:700}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+
+/* ============ Hero：口号区 + 覆盖领域轮播 ============ */
+.hero{height:auto;min-height:0;max-height:none;padding:0;overflow:hidden}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;background-size:cover;background-position:center;display:flex;align-items:center}
+.hero-slide.active{opacity:1}
+.hero-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,26,50,.9) 0%,rgba(10,35,66,.72) 45%,rgba(10,35,66,.35) 100%)}
+.hero-content{position:relative;z-index:2;color:#fff;width:min(1200px,92%);margin:0 auto;padding-top:40px}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;letter-spacing:4px;color:var(--gold-2);font-weight:600;margin-bottom:18px}
+.hero-eyebrow::before{content:"";width:36px;height:2px;background:var(--gold)}
+.hero-content h1{font-size:clamp(34px,6vw,62px);font-weight:800;line-height:1.18;margin-bottom:20px;letter-spacing:1px}
+.hero-content h1 em{font-style:normal;color:var(--gold-2)}
+.hero-content p{font-size:clamp(15px,2vw,19px);color:rgba(255,255,255,.88);max-width:640px;margin-bottom:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 30px;border-radius:40px;font-size:15px;font-weight:600;cursor:pointer;transition:.3s;border:1px solid transparent}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--navy);box-shadow:0 8px 24px rgba(245,197,24,.35)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(245,197,24,.5)}
+.btn-ghost{border-color:rgba(255,255,255,.6);color:#fff;background:rgba(255,255,255,.06)}
+.btn-ghost:hover{background:rgba(255,255,255,.16);border-color:#fff}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.hero-dots{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:10px}
+.hero-dots button{width:34px;height:4px;border:none;border-radius:2px;background:rgba(255,255,255,.35);cursor:pointer;transition:.3s}
+.hero-dots button.active{background:var(--gold);width:52px}
+.hero-arrow{position:absolute;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;font-size:20px;cursor:pointer;transition:.3s;display:flex;align-items:center;justify-content:center}
+.hero-arrow:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.hero-arrow.prev{left:22px}
+.hero-arrow.next{right:22px}
+.scroll-hint{position:absolute;bottom:88px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.6);font-size:12px;letter-spacing:2px;display:flex;flex-direction:column;align-items:center;gap:6px}
+.scroll-hint::after{content:"";width:1px;height:34px;background:linear-gradient(var(--gold),transparent)}
+
+/* ---- 口号区（深藏蓝渐变） ---- */
+/* 口号覆盖层：浮在轮播图片之上（2026-09-29 由"上方独立深蓝块"改为"覆盖层"） */
+.hero-slogan{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:76px 24px 0;pointer-events:none;background:linear-gradient(180deg,rgba(6,18,38,.40) 0%,rgba(6,18,38,.08) 46%,rgba(6,18,38,.52) 100%)}
+.hero-slogan .container{position:relative;z-index:1;width:100%}
+.hero-slogan::before{content:none}   /* 原为纯色块设计的光斑，覆盖层上已不需要 */
+.hero-slogan .container{position:relative}
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;font-size:14px;letter-spacing:3px;color:var(--gold-2);font-weight:600;margin-bottom:22px}
+.hero-kicker::before,.hero-kicker::after{content:"";width:30px;height:1px;background:var(--gold)}
+.hero-slogan h1{font-size:clamp(34px,5.4vw,58px);font-weight:800;line-height:1.25;letter-spacing:1px;color:#fff;text-shadow:0 3px 28px rgba(3,10,22,.8),0 1px 4px rgba(3,10,22,.65)}
+.hero-slogan h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{font-size:clamp(15px,2vw,18px);color:rgba(255,255,255,.85);max-width:860px;margin:24px auto 36px;line-height:1.85}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.hero-slogan .hero-cta,.hero-slogan .btn{pointer-events:auto}
+.hero-slogan .btn-ghost{border-color:rgba(255,255,255,.55);color:#fff;background:rgba(255,255,255,.07)}
+.hero-slogan .btn-ghost:hover{background:rgba(255,255,255,.18);border-color:#fff}
+
+/* ---- 覆盖领域图片轮播 ---- */
+.field-carousel{position:relative;height:660px;overflow:hidden;background:var(--navy)}
+.fc-slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;background-size:cover;background-position:center;will-change:transform,opacity}
+.fc-slide.active{opacity:1;animation:kenburns 9s ease-out forwards}
+.fc-slide.active:nth-child(even){animation-name:kenburns-out}
+@keyframes kenburns{0%{transform:scale(1.16) translate(-1.5%,-1.2%)}100%{transform:scale(1.03) translate(0,0)}}
+@keyframes kenburns-out{0%{transform:scale(1.03) translate(0,0)}100%{transform:scale(1.16) translate(1.5%,1.2%)}}
+.fc-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,26,50,.18) 0%,transparent 32%,rgba(8,26,50,.62) 100%)}
+/* 偏亮的底图（如新能源日落）单独加强压暗，其余保持清透 */
+.fc-slide.dim::after{background:linear-gradient(180deg,rgba(8,26,50,.64) 0%,rgba(8,26,50,.44) 42%,rgba(8,26,50,.68) 100%)}
+.fc-tag{position:absolute;left:50%;bottom:66px;transform:translateX(-50%);z-index:3;background:rgba(255,255,255,.94);color:var(--navy);padding:11px 34px;border-radius:40px;font-size:17px;font-weight:700;letter-spacing:2px;box-shadow:0 10px 34px rgba(0,0,0,.28);white-space:nowrap}
+.fc-count{position:absolute;top:96px;right:28px;z-index:4;color:#fff;font-family:var(--font-en);font-size:13px;letter-spacing:2px;background:rgba(8,26,50,.55);padding:7px 16px;border-radius:22px}
+.field-carousel .hero-dots{bottom:22px}
+.field-carousel .hero-dots button{background:rgba(255,255,255,.4)}
+.field-carousel .hero-dots button.active{background:var(--gold);width:52px}
+.field-carousel .hero-arrow{color:#fff;border-color:rgba(255,255,255,.5);background:rgba(8,26,50,.32)}
+.field-carousel .hero-arrow:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+
+/* ============ 数据大屏 ============ */
+.stats{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 60%,#164a7f 100%);padding:64px 0;color:#fff}
+.stats-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.stat-item{text-align:center;padding:18px 8px;border-right:1px solid rgba(255,255,255,.12)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:clamp(28px,3vw,42px);font-weight:800;font-family:var(--font-en);line-height:1.1;color:#fff}
+.stat-num .suffix{font-size:.55em;color:var(--gold);font-weight:700;margin-left:2px}
+.stat-label{font-size:13px;color:rgba(255,255,255,.72);margin-top:8px;letter-spacing:1px}
+
+/* ============ 关于 ============ */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;margin-top:44px}
+.about-text p{color:var(--text-2);margin-bottom:16px;font-size:15.5px}
+.about-text p strong{color:var(--navy)}
+.about-points{margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.about-point{display:flex;gap:12px;align-items:flex-start;background:var(--bg-2);border:1px solid var(--line);border-radius:12px;padding:14px 16px;transition:.3s}
+.about-point:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.about-point i{width:36px;height:36px;min-width:36px;border-radius:9px;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:16px}
+.about-point b{display:block;color:var(--navy);font-size:15px;margin-bottom:2px}
+.about-point span{font-size:12.5px;color:var(--text-2)}
+.about-media{position:relative}
+.about-media img.main{width:100%;border-radius:var(--radius);box-shadow:var(--shadow-lg);height:420px;object-fit:cover}
+.about-badge{position:absolute;bottom:-24px;right:-12px;background:linear-gradient(135deg,var(--gold),var(--gold-2));color:var(--navy);border-radius:16px;padding:20px 26px;box-shadow:var(--shadow-lg);text-align:center}
+.about-badge b{font-size:30px;font-weight:800;font-family:var(--font-en);display:block;line-height:1}
+.about-badge span{font-size:12px;font-weight:600;letter-spacing:1px}
+
+/* ============ 业务体系 ============ */
+.services{background:linear-gradient(180deg,#fff 0%,#fff 50%,var(--bg-2) 50%,var(--bg-2) 100%)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+.svc-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 20px;transition:.3s;position:relative;overflow:hidden;display:flex;flex-direction:column}
+.svc-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-2));transform:scaleX(0);transition:.35s}
+.svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.svc-card:hover::before{transform:scaleX(1)}
+.svc-card .no{position:absolute;top:14px;right:16px;font-size:30px;font-weight:800;color:rgba(245,197,24,.18);font-family:var(--font-en)}
+.svc-card i{font-size:26px;display:block;margin-bottom:12px}
+.svc-card h4{font-size:16.5px;color:var(--navy);font-weight:700;margin-bottom:8px;line-height:1.4}
+.svc-card p{font-size:13px;color:var(--text-2);line-height:1.7;flex:1}
+.svc-card .obj{margin-top:12px;font-size:11.5px;color:var(--blue);font-weight:600;letter-spacing:.5px}
+.svc-card .obj em{font-style:normal;background:rgba(20,93,160,.08);border-radius:14px;padding:3px 10px;margin-right:6px;display:inline-block;margin-top:4px}
+
+/* ============ 生态飞轮 ============ */
+.eco{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,#164a7f 100%);color:#fff;position:relative;overflow:hidden}
+.eco::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 20%,rgba(245,197,24,.12),transparent 55%),radial-gradient(circle at 10% 90%,rgba(46,134,193,.2),transparent 55%)}
+.eco .section-title{color:#fff}
+.eco .section-sub{color:rgba(255,255,255,.72);margin:0 auto}
+.eco .section-tag{color:var(--gold)}
+.eco-track{position:relative;margin-top:56px;display:flex;align-items:center;justify-content:center;flex-wrap:nowrap}
+.eco-node{text-align:center;position:relative;z-index:2;width:150px;flex:0 0 auto}
+.eco-ring{width:118px;height:118px;margin:0 auto 14px;border-radius:50%;border:2px solid rgba(255,255,255,.22);background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:.35s;backdrop-filter:blur(3px)}
+.eco-node:nth-child(1) .eco-ring{border-color:var(--gold)}
+.eco-node:nth-child(1) .eco-ring i{color:var(--gold)}
+.eco-ring:hover{transform:scale(1.06);border-color:var(--gold);box-shadow:0 0 40px rgba(245,197,24,.25)}
+.eco-ring i{font-style:normal;font-size:26px;line-height:1;margin-bottom:6px}
+.eco-ring .en{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.55);font-family:var(--font-en)}
+.eco-node b{display:block;font-size:16px;font-weight:700;margin-bottom:4px}
+.eco-node span{font-size:12px;color:rgba(255,255,255,.6);display:block;line-height:1.6}
+.eco-arrow{flex:1;max-width:56px;min-width:18px;height:2px;background:linear-gradient(90deg,rgba(245,197,24,.15),var(--gold));position:relative;margin:0 2px;z-index:1}
+.eco-arrow::after{content:"›";position:absolute;right:-2px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:20px;line-height:1}
+.eco-loop{text-align:center;margin-top:42px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;color:rgba(255,255,255,.85);font-size:14px}
+.eco-loop b{color:var(--gold);font-weight:700}
+.eco-loop .ring{width:30px;height:30px;border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--gold);flex:0 0 auto}
+
+/* ============ 核心支撑 ============ */
+.core{background:var(--bg-2)}
+.core-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+.core-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 24px;text-align:center;transition:.35s;position:relative;overflow:hidden}
+.core-card::after{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--gold));transform:scaleX(0);transition:.35s}
+.core-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-lg)}
+.core-card:hover::after{transform:scaleX(1)}
+.core-icon{width:66px;height:66px;margin:0 auto 18px;border-radius:18px;background:linear-gradient(135deg,rgba(20,93,160,.12),rgba(245,197,24,.16));display:flex;align-items:center;justify-content:center;font-size:30px}
+.core-card h3{font-size:17px;color:var(--navy);margin-bottom:10px;font-weight:700}
+.core-card p{font-size:13px;color:var(--text-2);line-height:1.7}
+.core-num{position:absolute;top:14px;right:16px;font-size:40px;font-weight:800;color:rgba(10,35,66,.05);font-family:var(--font-en)}
+
+/* ============ 覆盖领域 ============ */
+.fields{background:var(--navy);color:#fff}
+.fields .section-title{color:#fff}
+.fields .section-sub{color:rgba(255,255,255,.7)}
+.fields-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:44px}
+.field-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:24px 18px;text-align:center;transition:.3s;backdrop-filter:blur(4px)}
+.field-card:hover{background:rgba(255,255,255,.13);transform:translateY(-5px);border-color:var(--gold)}
+.field-card i{font-size:32px;display:block;margin-bottom:12px}
+.field-card h4{font-size:15.5px;font-weight:600}
+.field-card .en{display:block;font-size:11px;color:rgba(255,255,255,.5);font-family:var(--font-en);letter-spacing:1px;margin-top:4px}
+
+/* ============ 品牌会议 ============ */
+.conf-filter{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:30px 0 36px}
+.conf-filter button{padding:8px 20px;border-radius:30px;border:1px solid var(--line);background:#fff;color:var(--text-2);font-size:14px;cursor:pointer;transition:.25s;font-family:var(--font)}
+.conf-filter button.active,.conf-filter button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.conf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.conf-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.35s;display:flex;flex-direction:column}
+.conf-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lg)}
+.conf-cover{height:140px;background:linear-gradient(135deg,var(--navy),var(--blue-2));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.conf-cover::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(245,197,24,.25),transparent 60%)}
+.conf-cover b{color:#fff;font-size:24px;font-family:var(--font-en);letter-spacing:1px;font-weight:800;position:relative;z-index:1;text-align:center;padding:0 12px}
+.conf-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.conf-body h4{font-size:15.5px;color:var(--navy);font-weight:700;margin-bottom:6px}
+.conf-body p{font-size:12.5px;color:var(--text-2);flex:1;margin-bottom:12px}
+.conf-meta{display:flex;justify-content:space-between;align-items:center;border-top:1px dashed var(--line);padding-top:10px;font-size:12px;color:var(--text-2)}
+.conf-meta .tag{background:rgba(245,197,24,.16);color:#8a6d00;padding:3px 10px;border-radius:20px;font-weight:600}
+
+/* ---- 品牌会议 logo 墙（100 个品牌会议 logo）---- */
+.logo-wall{display:grid;grid-template-columns:repeat(10,1fr);gap:12px}
+.logo-cell{background:#fff;border:1px solid var(--line);border-radius:12px;height:96px;display:flex;align-items:center;justify-content:center;padding:12px;transition:.3s;overflow:hidden}
+.logo-cell img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.logo-cell:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:rgba(245,197,24,.8)}
+.logo-cell.dark{background:var(--navy);border-color:var(--navy)}
+/* 折叠：默认只显示前 50 个，点「查看更多品牌」展开全部 */
+.logo-wall:not(.open) .logo-cell:nth-child(n+51){display:none}
+.logo-more{display:flex;justify-content:center;margin-top:34px}
+.logo-more button{padding:13px 36px;border-radius:40px;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:15px;font-weight:600;font-family:var(--font);cursor:pointer;transition:.3s;letter-spacing:.5px}
+.logo-more button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.logo-more button::after{content:" ▾";font-size:12px;opacity:.65}
+.logo-more button[aria-expanded="true"]::after{content:" ▴";font-size:12px;opacity:.65}
+/* 专家卡片：默认只显示前 12 张，点「查看更多人员」展开全部 */
+.exp-grid:not(.open) .exp-card:nth-child(n+13){display:none}
+.exp-more{display:flex;justify-content:center;margin-top:38px}
+.exp-more button{padding:13px 36px;border-radius:40px;border:1px solid var(--line);background:#fff;color:var(--navy);font-size:15px;font-weight:600;font-family:var(--font);cursor:pointer;transition:.3s;letter-spacing:.5px}
+.exp-more button:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+.exp-more button::after{content:" ▾";font-size:12px;opacity:.65}
+.exp-more button[aria-expanded="true"]::after{content:" ▴";font-size:12px;opacity:.65}
+
+/* ============ 专家资源 ============ */
+.experts{background:var(--bg-2)}
+.exp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+.exp-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 20px;text-align:center;transition:.3s}
+.exp-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.exp-avatar{overflow:hidden}
+.exp-avatar img{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+.exp-avatar{width:86px;height:86px;margin:0 auto 16px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--gold));display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:800;color:#fff;font-family:var(--font-en)}
+.exp-card h4{font-size:15.5px;color:var(--navy);font-weight:700}
+.exp-card .cat{font-size:12px;color:var(--blue);font-weight:600;margin:6px 0 4px;letter-spacing:1px}
+.exp-card .name{font-size:13px;color:var(--text-2);font-family:var(--font-en)}
+.exp-tip{margin-top:34px;background:linear-gradient(135deg,var(--navy),var(--navy-2));border-radius:var(--radius);padding:34px 40px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.exp-tip b{font-size:20px;font-weight:700;display:block;margin-bottom:6px}
+.exp-tip span{font-size:14px;color:rgba(255,255,255,.75)}
+.exp-tip .num{font-size:44px;font-weight:800;color:var(--gold);font-family:var(--font-en);white-space:nowrap}
+
+/* ============ 荣誉资质 ============ */
+.honor-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:44px}
+.honor-card{text-align:center;padding:28px 16px;background:#fff;border:1px solid var(--line);border-radius:14px;transition:.3s;position:relative}
+.honor-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--gold)}
+.honor-card .medal{width:64px;height:64px;margin:0 auto 14px;border-radius:50%;background:radial-gradient(circle at 30% 25%,var(--gold-2),var(--gold));display:flex;align-items:center;justify-content:center;font-size:28px;box-shadow:0 6px 18px rgba(245,197,24,.4)}
+.honor-card h4{font-size:14px;color:var(--navy);font-weight:700;line-height:1.5}
+.honor-card span{font-size:12px;color:var(--text-2);display:block;margin-top:6px}
+
+/* ============ 合作对象 ============ */
+.coop{background:var(--bg-2)}
+.coop-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:46px}
+.coop-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 20px;text-align:center;transition:.3s;display:flex;flex-direction:column}
+.coop-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);border-color:var(--gold)}
+.coop-card .co{width:60px;height:60px;margin:0 auto 14px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;flex:0 0 auto}
+.coop-card h4{font-size:16px;color:var(--navy);font-weight:700;margin-bottom:10px}
+.coop-card p{font-size:12.5px;color:var(--text-2);line-height:1.75;flex:1;text-align:left}
+.coop-card .v{margin-top:10px;font-size:12px;color:#8a6d00;background:rgba(245,197,24,.14);border-radius:10px;padding:8px 10px;text-align:left;line-height:1.6;font-weight:500}
+.coop-note{margin-top:34px;text-align:center;font-size:13.5px;color:var(--text-2)}
+.coop-note b{color:var(--navy)}
+
+/* ============ 新闻资讯 ============ */
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:44px}
+.news-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.3s;cursor:pointer;display:flex;flex-direction:column}
+.news-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+.news-date{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:14px 18px;display:flex;align-items:center;gap:10px}
+.news-date b{font-size:22px;font-family:var(--font-en)}
+.news-date span{font-size:12px;color:rgba(255,255,255,.75)}
+.news-body{padding:18px;flex:1;display:flex;flex-direction:column}
+.news-body h4{font-size:15.5px;color:var(--navy);font-weight:700;margin-bottom:8px;line-height:1.5}
+.news-body p{font-size:13px;color:var(--text-2);flex:1}
+.news-more{margin-top:12px;color:var(--blue);font-size:13px;font-weight:600}
+
+/* ============ 联系我们 ============ */
+.contact{background:var(--bg-2)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;margin-top:44px}
+.contact-form{background:#fff;border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:13.5px;color:var(--navy);font-weight:600;margin-bottom:7px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:10px;font-size:14.5px;font-family:var(--font);transition:.25s;background:#FBFCFE;color:var(--text)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--blue);background:#fff;box-shadow:0 0 0 3px rgba(20,93,160,.12)}
+.form-group textarea{height:110px;resize:vertical}
+.contact-info{display:flex;flex-direction:column;gap:16px}
+.info-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px;display:flex;gap:16px;align-items:flex-start;transition:.3s}
+.info-card:hover{border-color:var(--blue);transform:translateX(4px)}
+.info-card .ic{width:46px;height:46px;min-width:46px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--blue-2));color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px}
+.info-card h5{font-size:14.5px;color:var(--navy);font-weight:700;margin-bottom:4px}
+.info-card p{font-size:13.5px;color:var(--text-2);line-height:1.6}
+.qr-wrap{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;gap:18px;align-items:center}
+.qr-wrap img{width:110px;height:110px;border-radius:8px;object-fit:cover}
+.qr-wrap b{font-size:14.5px;color:var(--navy)}
+.qr-wrap span{font-size:12.5px;color:var(--text-2);display:block;margin-top:4px}
+
+/* ============ 页脚 ============ */
+footer{background:var(--navy);color:rgba(255,255,255,.75);padding:60px 0 0}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px;padding-bottom:44px}
+.foot-brand img{width:52px;height:52px;border-radius:10px;background:#fff;padding:4px;margin-bottom:14px}
+.foot-brand b{color:#fff;font-size:19px;display:block;margin-bottom:10px}
+.foot-brand p{font-size:13px;line-height:1.8;max-width:320px}
+.foot-col h5{color:#fff;font-size:15px;font-weight:700;margin-bottom:18px;position:relative;padding-bottom:10px}
+.foot-col h5::after{content:"";position:absolute;left:0;bottom:0;width:26px;height:2px;background:var(--gold)}
+.foot-col a{display:block;font-size:13.5px;padding:5px 0;transition:.25s}
+.foot-col a:hover{color:var(--gold-2);padding-left:6px}
+.foot-col p{font-size:13.5px;line-height:2}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;font-size:12.5px;color:rgba(255,255,255,.5);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+/* ============ 悬浮元素 ============ */
+.back-top{position:fixed;right:26px;bottom:30px;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;border:none;font-size:20px;cursor:pointer;opacity:0;visibility:hidden;transition:.35s;z-index:900;box-shadow:var(--shadow)}
+.back-top.show{opacity:1;visibility:visible}
+.back-top:hover{transform:translateY(-4px)}
+.fab{position:fixed;right:26px;bottom:92px;z-index:900;display:flex;flex-direction:column;gap:10px}
+.fab a{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;box-shadow:var(--shadow);transition:.3s}
+.fab a:hover{transform:scale(1.1)}
+.fab .wechat{background:linear-gradient(135deg,#07C160,#059A4F)}
+.fab .mail{background:linear-gradient(135deg,var(--blue),var(--blue-2))}
+
+/* ============ 弹窗 ============ */
+.modal{position:fixed;inset:0;z-index:2000;background:rgba(8,20,38,.6);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal.open{display:flex}
+.modal-box{background:#fff;border-radius:18px;max-width:640px;width:100%;max-height:82vh;overflow-y:auto;padding:36px;position:relative;animation:pop .35s ease}
+@keyframes pop{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+.modal-close{position:absolute;top:16px;right:18px;width:34px;height:34px;border-radius:50%;border:none;background:var(--bg-2);cursor:pointer;font-size:16px;color:var(--text-2);transition:.2s}
+.modal-close:hover{background:var(--navy);color:#fff}
+.modal-box h3{font-size:20px;color:var(--navy);font-weight:800;margin-bottom:8px}
+.modal-box .m-date{font-size:12.5px;color:var(--text-2);margin-bottom:16px}
+.modal-box p{font-size:14px;color:var(--text-2);line-height:1.9;margin-bottom:12px}
+
+/* ============ Toast ============ */
+.toast{position:fixed;top:90px;left:50%;transform:translateX(-50%) translateY(-20px);background:var(--navy);color:#fff;padding:14px 28px;border-radius:40px;font-size:14px;z-index:3000;opacity:0;visibility:hidden;transition:.35s;box-shadow:var(--shadow-lg);display:flex;align-items:center;gap:10px}
+.toast.show{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+
+/* ============ 滚动动画 ============ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ============ 响应式 ============ */
+@media(max-width:1100px){
+  .stats-grid{grid-template-columns:repeat(3,1fr);row-gap:26px}
+  .stat-item{border-right:none}
+  .core-grid{grid-template-columns:repeat(2,1fr)}
+  .fields-grid{grid-template-columns:repeat(3,1fr)}
+  .conf-grid{grid-template-columns:repeat(3,1fr)}
+  .logo-wall{grid-template-columns:repeat(8,1fr)}
+  .exp-grid{grid-template-columns:repeat(2,1fr)}
+  .honor-grid{grid-template-columns:repeat(3,1fr)}
+  .coop-grid{grid-template-columns:repeat(3,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-media img.main{height:340px}
+  .news-grid{grid-template-columns:repeat(2,1fr)}
+  .contact-grid{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .eco-track{flex-wrap:wrap;gap:20px 6px}
+  .eco-arrow{display:none}
+}
+@media(max-width:768px){
+  section{padding:64px 0}
+  nav.main-nav{position:fixed;top:76px;left:0;right:0;background:rgba(8,26,50,.98);flex-direction:column;padding:14px 20px 24px;gap:4px;transform:translateY(-120%);transition:.35s;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+  nav.main-nav.open{transform:none}
+  nav.main-nav a{padding:13px 12px;font-size:16px;border-bottom:1px solid rgba(255,255,255,.06)}
+  .hamburger{display:flex}
+  .hero-arrow{display:none}
+  .field-carousel{height:560px}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .core-grid{grid-template-columns:1fr}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .fields-grid{grid-template-columns:repeat(2,1fr)}
+  .conf-grid{grid-template-columns:1fr 1fr}
+  .logo-wall{grid-template-columns:repeat(5,1fr);gap:10px}
+  .logo-cell{height:80px;padding:8px}
+  .exp-grid{grid-template-columns:1fr}
+  .honor-grid{grid-template-columns:repeat(2,1fr)}
+  .coop-grid{grid-template-columns:1fr 1fr}
+  .news-grid{grid-template-columns:1fr}
+  .about-points{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-slogan h1{font-size:32px}
+  .hero-content h1{font-size:32px}
+  .about-badge{right:8px}
+  .eco-node{width:44%;flex:0 0 44%}
+}
+@media(max-width:480px){
+  .conf-grid{grid-template-columns:1fr}
+  .logo-wall{grid-template-columns:repeat(4,1fr)}
+  .svc-grid,.coop-grid{grid-template-columns:1fr}
+  .eco-node{width:100%;flex:0 0 100%}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ 顶部导航 ============ -->
+<header id="header">
+  <div class="container nav-inner">
+    <a class="brand" href="#home">
+      <img src="assets/logo-mark.jpg" alt="格物泰克 logo">
+      <div class="brand-text">
+        <b><span class="zh">格物泰克</span><span class="en">Gowotex</span></b>
+        <span>gowotex.com</span>
+      </div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="active"><span class="zh">首页</span><span class="en">Home</span></a>
+      <a href="#about"><span class="zh">关于我们</span><span class="en">About</span></a>
+      <a href="#services"><span class="zh">业务体系</span><span class="en">Services</span></a>
+      <a href="#conferences"><span class="zh">品牌会议</span><span class="en">Conferences</span></a>
+      <a href="#experts"><span class="zh">专家资源</span><span class="en">Experts</span></a>
+      <a href="#news"><span class="zh">会议动态</span><span class="en">Conference News</span></a>
+      <a href="#contact"><span class="zh">联系我们</span><span class="en">Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <div class="lang-switch">
+        <button class="active" onclick="setLang('zh')">中</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ Hero：口号区 ============ -->
+<section class="hero" id="home">
+  <div class="field-carousel" id="fieldCarousel">
+    <div class="fc-slide active" style="background-image:url('assets/img/fields/hero-01-biomed.jpg')"></div>
+    <div class="fc-slide" style="background-image:url('assets/img/fields/hero-02-micro.jpg')"></div>
+    <div class="fc-slide" style="background-image:url('assets/img/fields/hero-03-ai.jpg')"></div>
+    <div class="fc-slide" style="background-image:url('assets/img/fields/hero-04-quantum.jpg')"></div>
+    <div class="fc-slide" style="background-image:url('assets/img/fields/hero-05-manufacturing.jpg')"></div>
+    <div class="fc-slide dim" style="background-image:url('assets/img/fields/hero-06-energy.jpg')"></div>
+    <div class="fc-slide" style="background-image:url('assets/img/fields/hero-07-deepsea.jpg')"></div>
+    <div class="fc-slide" style="background-image:url('assets/img/fields/hero-08-space.jpg')"></div>
+    <button class="hero-arrow prev" onclick="moveField(-1)">‹</button>
+    <button class="hero-arrow next" onclick="moveField(1)">›</button>
+    <div class="hero-dots" id="fieldDots"></div>
+    <div class="fc-count" id="fcCount">01 / 08</div>
+    <div class="hero-slogan">
+      <div class="container">
+        <h1><span class="zh">国际会议 · 国际人才 · 城市产业<br><em>全链路服务生态平台</em></span><span class="en">International Conferences · Global Talents · Urban Industry<br><em>A Full-Chain Service Ecosystem</em></span></h1>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#contact"><span class="zh">洽谈合作</span><span class="en">Partner With Us</span></a>
+          <a class="btn btn-ghost" href="#services"><span class="zh">了解业务体系</span><span class="en">Business Systems</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 数据大屏（信任背书） ============ -->
+<section class="stats">
+  <div class="container stats-grid">
+    <div class="stat-item reveal"><div class="stat-num"><span class="count" data-target="60">0</span><span class="suffix">+</span></div><div class="stat-label"><span class="zh">累计邀约诺贝尔奖得主</span><span class="en">Nobel Laureates Invited</span></div></div>
+    <div class="stat-item reveal d1"><div class="stat-num"><span class="count" data-target="100">0</span><span class="suffix">+</span></div><div class="stat-label"><span class="zh">累计打造品牌会议</span><span class="en">Brand Conferences</span></div></div>
+    <div class="stat-item reveal d2"><div class="stat-num"><span class="count" data-target="1000">0</span><span class="suffix">+</span></div><div class="stat-label"><span class="zh">大型国际活动经验</span><span class="en">Major International Events Hosted</span></div></div>
+    <div class="stat-item reveal d3"><div class="stat-num"><span class="count" data-target="10000">0</span><span class="suffix">+</span></div><div class="stat-label"><span class="zh">国内外合作机构</span><span class="en">Partner Organizations</span></div></div>
+    <div class="stat-item reveal d4"><div class="stat-num"><span class="count" data-target="100000">0</span><span class="suffix">+</span></div><div class="stat-label"><span class="zh">全球专家学者企业家参会</span><span class="en">Global Experts &amp; Scholars</span></div></div>
+    <div class="stat-item reveal"><div class="stat-num"><span class="count" data-target="3000">0</span><span class="suffix">万+</span></div><div class="stat-label"><span class="zh">自有博士与专家数据库</span><span class="en">PhD-level Expert Database</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 关于我们 ============ -->
+<section id="about">
+  <div class="container">
+    <div class="section-tag reveal"><span class="zh">关于格物泰克</span><span class="en">ABOUT GOWOTEX</span></div>
+    <h2 class="section-title reveal"><span class="zh">国际化商务服务机构<br>承继二十余年国际会议积淀 · 连接中国与世界创新资源</span><span class="en">An International Business Services Firm<br>20+ Years of Conference Legacy Connecting Global Innovation with China</span></h2>
+    <div class="gold-line reveal"></div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p><span class="zh"><strong>格物泰克商务会展（大连）有限公司（Gowotex）</strong>是一家以国际高端会议与展览为平台，集商务服务、高端人才引进与跨境科技项目对接于一体的国际化商务服务机构。创始人与核心管理团队深耕国际高端会议与展览领域二十余年，曾主导运营多个国际品牌会议平台，积累了覆盖全球的专家资源与一站式全流程服务能力；公司在此基础上整合组建，全面承继多年积淀的业务、核心资源与品牌资产，坚持<strong>“全球视野 · 服务本土”</strong>理念，致力于打造中国与世界创新资源对接的核心平台，为客户提供高效、便捷、具有国际影响力的商务对接服务。</span><span class="en"><strong>Gowotex Business Exhibition (Dalian) Co., Ltd.</strong> is an international business services firm built on high-end international conferences and exhibitions, integrating business services, high-level talent introduction and cross-border technology &amp; project matching. The founders and core management team have been engaged in international conferences and exhibitions for over 20 years, leading multiple international conference brands and building a global expert network with one-stop, full-cycle service capabilities. Founded on this legacy, Gowotex fully inherits the business, core resources and brand assets accumulated over two decades. Guided by the philosophy of <strong>“Global Vision · Serving Local Growth”</strong>, we are committed to becoming a core platform connecting China with the world’s innovation resources.</span></p>
+        <div class="about-points">
+          <div class="about-point"><i>01</i><div><b><span class="zh">高端人才数据库</span><span class="en">High-End Talent Database</span></b><span class="zh">与世界 100 多个国家和地区、数万家行业组织与海外大学联合共建，收录逾三千万条博士级高层次专家数据</span><span class="en">Co-built with 100+ countries and regions, tens of thousands of organizations and universities — 30+ million PhD-level expert records</span></div></div>
+          <div class="about-point d1"><i>02</i><div><b><span class="zh">国际品牌会议</span><span class="en">International Conference Brands</span></b><span class="zh">创办及联合举办国际品牌会议百余个，累计举办千余场国际交流活动，形成覆盖全球的学术与产业交流网络</span><span class="en">100+ international conference brands and 1,000+ exchange events across a global academic &amp; industry network</span></div></div>
+          <div class="about-point d2"><i>03</i><div><b><span class="zh">国际专家资源</span><span class="en">Global Expert Network</span></b><span class="zh">先后邀请六十余位诺贝尔奖得主（累计参会百余人次）与十万余名国际知名专家学者、企业家到访中国，开展招才引智与项目合作</span><span class="en">60+ Nobel laureates (100+ participations) and 100,000+ renowned scholars and entrepreneurs engaged for talent, investment and research programs</span></div></div>
+          <div class="about-point d3"><i>04</i><div><b><span class="zh">资质与合作网络</span><span class="en">Accreditations &amp; Partners</span></b><span class="zh">国家级人才资源库及华表奖、金手指奖、金海鸥大奖等行业荣誉；与 20 多个会议目的地城市、顶尖学府及世界 500 强企业长期合作</span><span class="en">A national-level talent resource database, plus the Huabiao, Golden Finger and Golden Seagull industry awards; long-term cooperation with 20+ convention destination cities, leading universities and Fortune 500 companies</span></div></div>
+        </div>
+        <p><span class="zh">业务覆盖生命科学、基础医学前沿、新药研发、集成电路与半导体、人工智能、量子科技、智能制造、新材料、新能源、海洋科技及装备、教育科技等战略性新兴产业方向。企业使命<strong>“汇聚天下英才，服务科技未来”</strong>，坚持<strong>创新至上、诚信守约、合作共赢、务实笃行</strong>——让世界智慧汇聚中国，让中国创新链接全球。</span><span class="en">We serve strategic emerging industries including life sciences, frontier basic medicine, drug R&amp;D, integrated circuits &amp; semiconductors, AI, quantum technology, smart manufacturing, new materials, new energy, marine science &amp; equipment, and education technology. Our mission is to <strong>gather global talent for the future of science and technology</strong>, upholding <strong>innovation, integrity, win-win cooperation and pragmatism</strong> — bringing the world’s wisdom to China and China’s innovation to the world.</span></p>
+      </div>
+      <div class="about-media reveal d2">
+        <img class="main" src="assets/img/about-hall.jpg" alt="格物泰克 · 国际会议现场">
+        <div class="about-badge"><b>20+</b><span><span class="zh">年国际会议运营经验</span><span class="en">Years in International Conferences</span></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 业务体系 ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag reveal" style="justify-content:center"><span class="zh">业务体系</span><span class="en">BUSINESS SYSTEMS</span></div>
+      <h2 class="section-title reveal"><span class="zh">业务体系 · 共享同一国际专家资源与作业体系</span><span class="en">Business Systems on One Shared Platform</span></h2>
+      <div class="gold-line reveal"></div>
+      <p class="section-sub reveal"><span class="zh">格物泰克业务围绕国家战略性新兴产业和未来产业方向，以国际会议为纽带，形成业务体系协同的全链条服务生态：以会聚人、以人引才、以才招商、以商成项，各体系共享国际专家资源与作业体系，相互导流、协同增强，并可面向政府、企业及行业组织提供会议、展览、人才、项目一体化的定制化解决方案。</span><span class="en">Gowotex’s business is built around China’s strategic emerging and future industries. With international conferences as the connecting link, our business systems form a coordinated, full-chain service ecosystem — gathering talent through conferences, attracting talent to regions, turning talent into investment, and turning deals into projects. All systems share the same global expert resources and delivery framework, channel leads to one another and reinforce each other, and can serve governments, enterprises and industry organizations with integrated, customized solutions across conferences, exhibitions, talent and projects.</span></p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card reveal"><span class="no">01</span><i>🎪</i><h4><span class="zh">国际会议品牌</span><span class="en">International Conference Brands</span></h4><p><span class="zh">自主创办及联合主办大型高端国际品牌会议，主办、承办各类专业展览会，提供选题立项、日程策划、专家委员会组建、大会主席邀请、招展招商、会务执行与会后总结全流程服务，并组织政府、园区及企事业单位组团参加境内外国际会议与展览，协助企业拓展海外市场。</span><span class="en">We create and co-host high-end international conference brands and organize professional exhibitions, delivering the full cycle — topic selection, agenda design, program-committee formation, conference chair recruitment, exhibitor and sponsor development, on-site execution and post-event review. We also organize government, park and enterprise delegations to attend international conferences and exhibitions in China and abroad, helping companies expand into overseas markets.</span></p><div class="obj"><span class="zh">服务：政府 / 学术机构 / 企业</span><span class="en">For: Government · Academia · Enterprises</span></div></div>
+      <div class="svc-card reveal d1"><span class="no">02</span><i>🎓</i><h4><span class="zh">国际人才引进服务</span><span class="en">Global Talent Acquisition</span></h4><p><span class="zh">依托自有国际专家数据库，为政府、高校、科研院所及企业开展海外高层次人才寻访、评估与引进落地服务，引进国际高端专家、客座教授与科研团队，推动学术研究与科技创新。</span><span class="en">Based on our proprietary global expert database, we source, evaluate and onboard overseas high-level talent for governments, universities, research institutes and enterprises — bringing in distinguished international experts, visiting professors and research teams to advance academic research and technological innovation.</span></p><div class="obj"><span class="zh">服务：政府 / 高校 / 科研院所 / 企业</span><span class="en">For: Government · Universities · Research Institutes · Enterprises</span></div></div>
+      <div class="svc-card reveal d2"><span class="no">03</span><i>📡</i><h4><span class="zh">会议情报与行业媒体</span><span class="en">Conference Intelligence &amp; Media</span></h4><p><span class="zh">沉淀历届会议议题、议程、嘉宾与产业知识，运营国际人才智库，提供全球会议日历、行业资讯与研究简报等情报产品与决策咨询服务，并为会展业上下游（场馆、搭建、酒店、差旅、翻译、技术服务等）提供信息与广告增值服务。</span><span class="en">We turn the themes, agendas, speakers and industry knowledge of past conferences into searchable intelligence — operating an international talent think tank and delivering conference calendars, industry news, research briefings and decision-support advisory services. We also provide information and advertising value-added services to the MICE supply chain, including venues, stand construction, hotels, travel, translation and technical services.</span></p><div class="obj"><span class="zh">服务：会展产业链 / 主办方</span><span class="en">For: MICE Supply Chain · Organizers</span></div></div>
+      <div class="svc-card reveal d3"><span class="no">04</span><i>📝</i><h4><span class="zh">会议策划服务（B2B）</span><span class="en">Conference Planning (B2B)</span></h4><p><span class="zh">面向企业、行业协会与机构提供国际会议策划，输出议题框架、议程编排、嘉宾策略与会议文案，承接各类机构会议、论坛、节庆活动的策划与执行，提供从策划到执行的一站式顾问服务。</span><span class="en">For enterprises, industry associations and institutions we deliver international conference planning — theme frameworks, agenda programming, speaker strategy and conference copywriting — and take on the planning and execution of institutional meetings, forums and festival events, as a one-stop advisory service from concept to delivery.</span></p><div class="obj"><span class="zh">服务：企业 / 行业协会</span><span class="en">For: Enterprises · Industry Associations</span></div></div>
+      <div class="svc-card reveal d4"><span class="no">05</span><i>⚙️</i><h4><span class="zh">会议全案代运营</span><span class="en">Full-Cycle Conference Operations</span></h4><p><span class="zh">承接主办方委托的会议全案代运营，将注册、招展、嘉宾、内容、现场与展后运营接入公司标准化作业体系，协办行业学会、协会年会，助力主办方扩大规模与影响力。</span><span class="en">We take on full-cycle conference operations on behalf of organizers, plugging registration, exhibitor development, speakers, content, on-site and post-event operations into our standardized delivery system. We co-organize annual meetings of academic societies and industry associations, helping organizers grow their scale and influence.</span></p><div class="obj"><span class="zh">服务：主办方 / 学会协会</span><span class="en">For: Organizers · Societies &amp; Associations</span></div></div>
+      <div class="svc-card reveal"><span class="no">06</span><i>🏟️</i><h4><span class="zh">B2B/B2G 会议与展中会承办</span><span class="en">B2B/B2G Conferences &amp; Expo Forums</span></h4><p><span class="zh">承接企业级（B2B）与政府级（B2G）会议承办，尤其擅长大型博览会与行业展会中的“展中会”——在主展流量场内组织专题论坛、技术研讨、新品发布与供需对接会，以“展的流量 × 专业的会”提升展会内容品质与客商黏性。</span><span class="en">We deliver enterprise-level (B2B) and government-level (B2G) conferences, with particular strength in “conferences within exhibitions” — organizing themed forums, technology seminars, product launches and buyer–supplier matchmaking inside major expos and trade shows. Expo traffic multiplied by conference expertise raises content quality and keeps exhibitors and buyers engaged.</span></p><div class="obj"><span class="zh">服务：大型展会 / 企业 / 政府</span><span class="en">For: Expo Groups · Enterprises · Government</span></div></div>
+      <div class="svc-card reveal d1"><span class="no">07</span><i>🎤</i><h4><span class="zh">演讲局与城市会展顾问服务</span><span class="en">Speakers Bureau &amp; City MICE Advisory</span></h4><p><span class="zh">为各类会议、展览、节庆及学术交流活动招募国际高端专家，包括诺奖大师、国外院士、世界 500 强企业高管及国际知名人士；为城市会展局与商务部门提供国际会议申办研判与申报、会展规划与对标分析、展会评估与政策申报辅导、城市会奖资源与目的地推介等顾问服务，协助城市引入品牌会议，串联招商与引才。</span><span class="en">We recruit world-class speakers for conferences, exhibitions, festivals and academic exchanges — Nobel laureates, foreign academicians, Fortune 500 executives and internationally renowned figures. For city convention bureaus and commerce departments we provide bid research and application support, MICE planning and benchmarking, event evaluation and policy-application guidance, and promotion of city MICE resources and destinations — helping cities attract brand conferences and linking investment attraction with talent recruitment.</span></p><div class="obj"><span class="zh">服务：城市会展局 / 商务部门 / 主办方</span><span class="en">For: Convention Bureaus · Commerce Departments · Organizers</span></div></div>
+      <div class="svc-card reveal d2"><span class="no">08</span><i>🏛️</i><h4><span class="zh">政府招商服务</span><span class="en">Investment Attraction Services</span></h4><p><span class="zh">以会招商，依托国际专家与企业家网络，结合地方产业方向绘制产业链招商图谱，组织招商型会议与政企对接，配合地方政府、产业园区与孵化器推动产业项目与创业团队落地，吸纳海外学子回国创业。</span><span class="en">Using conferences to attract investment, we map industrial chains with our global expert and entrepreneur network, organize investment-focused conferences and government–business matchmaking, and work with local governments, industrial parks and incubators to land industrial projects and startup teams — including attracting overseas Chinese talent back home to start businesses.</span></p><div class="obj"><span class="zh">服务：地方政府 / 园区 / 孵化器</span><span class="en">For: Local Government · Parks · Incubators</span></div></div>
+      <div class="svc-card reveal d3"><span class="no">09</span><i>🔗</i><h4><span class="zh">国际项目对接服务</span><span class="en">Global Project Matching</span></h4><p><span class="zh">开展中外技术转移、产学研合作、商务拓展与联合实验室等项目的撮合服务，为企业提供产品展示、市场推广与客户对接，通过国际会议运作与海外资源积累，推动国际需求与国内产业、资本精准对接。</span><span class="en">We match Chinese and international partners on technology transfer, industry–academia–research collaboration, business development and joint laboratories, and support companies with product showcases, market promotion and customer introductions. Through conference operations and accumulated overseas resources, we connect global demand precisely with domestic industry and capital.</span></p><div class="obj"><span class="zh">服务：企业 / 高校院所 / 园区</span><span class="en">For: Enterprises · Academia · Industrial Parks</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 覆盖领域 ============ -->
+<section class="fields" id="fields">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag reveal" style="justify-content:center;color:var(--gold)"><span class="zh">覆盖领域</span><span class="en">INDUSTRIES WE SERVE</span></div>
+      <h2 class="section-title reveal"><span class="zh">覆盖数十个学科领域 · 聚焦科技前沿与战略新兴产业</span><span class="en">Dozens of Disciplines, From Frontier Science to Strategic Industries</span></h2>
+      <div class="gold-line reveal"></div>
+    </div>
+    <div class="fields-grid">
+      <div class="field-card reveal"><i>🧬</i><h4><span class="zh">生命科学</span><span class="en">Life Sciences</span></h4></div>
+      <div class="field-card reveal d1"><i>🩺</i><h4><span class="zh">基础医学与临床</span><span class="en">Medicine &amp; Clinic</span></h4></div>
+      <div class="field-card reveal d2"><i>💊</i><h4><span class="zh">生物医药</span><span class="en">Biopharma</span></h4></div>
+      <div class="field-card reveal d3"><i>🔬</i><h4><span class="zh">新药研发</span><span class="en">Drug R&amp;D</span></h4></div>
+      <div class="field-card reveal"><i>🤖</i><h4><span class="zh">人工智能</span><span class="en">AI</span></h4></div>
+      <div class="field-card reveal d1"><i>⚛️</i><h4><span class="zh">量子科技</span><span class="en">Quantum Tech</span></h4></div>
+      <div class="field-card reveal d2"><i>🏭</i><h4><span class="zh">智能制造</span><span class="en">Smart Manufacturing</span></h4></div>
+      <div class="field-card reveal d3"><i>🧪</i><h4><span class="zh">新材料</span><span class="en">New Materials</span></h4></div>
+      <div class="field-card reveal"><i>⚡</i><h4><span class="zh">新能源</span><span class="en">New Energy</span></h4></div>
+      <div class="field-card reveal d1"><i>🌊</i><h4><span class="zh">海洋科学与装备</span><span class="en">Marine Science &amp; Tech</span></h4></div>
+      <div class="field-card reveal d2"><i>📡</i><h4><span class="zh">集成电路与半导体</span><span class="en">Semiconductors</span></h4></div>
+      <div class="field-card reveal d3"><i>📚</i><h4><span class="zh">教育科技</span><span class="en">EdTech</span></h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 品牌会议 ============ -->
+<section id="conferences">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag reveal" style="justify-content:center"><span class="zh">品牌会议</span><span class="en">BRAND CONFERENCES</span></div>
+      <h2 class="section-title reveal"><span class="zh">累计打造逾百个品牌会议 · 以下为部分代表</span><span class="en">100+ Conference Brands Built — Selected Examples</span></h2>
+      <div class="gold-line reveal"></div>
+    </div>
+    <div class="logo-wall reveal">
+      <div class="logo-cell"><img src="assets/img/logos/logo-001.webp" alt="3D打印" title="3D打印" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-002.webp" alt="5G" title="5G" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-003.webp" alt="不对称催化" title="不对称催化" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-004.webp" alt="中医药" title="中医药" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-005.webp" alt="云计算" title="云计算" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-006.webp" alt="人工智能" title="人工智能" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-007.webp" alt="会议产业日" title="会议产业日" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-008.webp" alt="传染病" title="传染病" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-009.webp" alt="低碳地球" title="低碳地球" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-010.webp" alt="信息技术" title="信息技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-011.webp" alt="健康" title="健康" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-012.webp" alt="储能" title="储能" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-013.webp" alt="催化" title="催化" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-014.webp" alt="儿科" title="儿科" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-015.webp" alt="先进材料" title="先进材料" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-016.webp" alt="内分泌与代谢" title="内分泌与代谢" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-017.webp" alt="农业生物技术" title="农业生物技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-018.webp" alt="分子细胞" title="分子细胞" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-019.webp" alt="分析" title="分析" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-020.webp" alt="创意" title="创意" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-021.webp" alt="动物生物技术" title="动物生物技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-022.webp" alt="化学" title="化学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-023.webp" alt="医学材料" title="医学材料" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-024.webp" alt="口腔" title="口腔" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-025.webp" alt="合成生物" title="合成生物" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-026.webp" alt="呼吸" title="呼吸" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-027.webp" alt="基因产业" title="基因产业" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-028.webp" alt="基因编辑" title="基因编辑" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-029.webp" alt="基因节" title="基因节" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-030.webp" alt="妇科" title="妇科" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-031.webp" alt="小RNA" title="小RNA" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-032.webp" alt="工业微生物" title="工业微生物" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-033.webp" alt="干细胞与再生医学" title="干细胞与再生医学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-034.webp" alt="微生物学" title="微生物学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-035.webp" alt="心理学" title="心理学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-036.webp" alt="心脏病" title="心脏病" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-037.webp" alt="抗体" title="抗体" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-038.webp" alt="抗衰老与长寿" title="抗衰老与长寿" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-039.webp" alt="教育" title="教育" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-040.webp" alt="新兴产业" title="新兴产业" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-041.webp" alt="新药研发" title="新药研发" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-042.webp" alt="智能世界" title="智能世界" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-043.webp" alt="智能制造" title="智能制造" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-044.webp" alt="智能材料" title="智能材料" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-045.webp" alt="智能电网" title="智能电网" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-046.webp" alt="智能能源" title="智能能源" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-047.webp" alt="机器人" title="机器人" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-048.webp" alt="油井增产和提高采收率" title="油井增产和提高采收率" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-049.webp" alt="海洋" title="海洋" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-050.webp" alt="海洋渔业" title="海洋渔业" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-051.webp" alt="海洋生物技术" title="海洋生物技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-052.webp" alt="海藻" title="海藻" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-053.webp" alt="消化" title="消化" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-054.webp" alt="清洁煤" title="清洁煤" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-055.webp" alt="渔业" title="渔业" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-056.webp" alt="物流" title="物流" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-057.webp" alt="物理" title="物理" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-058.webp" alt="物联网" title="物联网" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-059.webp" alt="环境" title="环境" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-060.webp" alt="环境生物技术" title="环境生物技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-061.webp" alt="生物信息技术" title="生物信息技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-062.webp" alt="生物医学" title="生物医学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-063.webp" alt="生物多样性" title="生物多样性" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-064.webp" alt="生物技术" title="生物技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-065.webp" alt="生物标记物" title="生物标记物" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-066.webp" alt="生物能源" title="生物能源" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-067.webp" alt="生理学" title="生理学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-068.webp" alt="疫苗" title="疫苗" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-069.webp" alt="癌症" title="癌症" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-070.webp" alt="眼科" title="眼科" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-071.webp" alt="知识经济" title="知识经济" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-072.webp" alt="石油微生物" title="石油微生物" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-073.webp" alt="石油技术" title="石油技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-074.webp" alt="神经" title="神经" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-075.webp" alt="精准医学" title="精准医学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-076.webp" alt="糖尿病" title="糖尿病" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-077.webp" alt="纳米医学" title="纳米医学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-078.webp" alt="纳米生物技术" title="纳米生物技术" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-079.webp" alt="纳米科技" title="纳米科技" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-080.webp" alt="绿色科技" title="绿色科技" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-081.webp" alt="编辑日" title="编辑日" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-082.webp" alt="美容产品产业" title="美容产品产业" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-083.webp" alt="老年" title="老年" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-084.webp" alt="肿瘤免疫学" title="肿瘤免疫学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-085.webp" alt="能源" title="能源" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-086.webp" alt="药物化学" title="药物化学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-087.webp" alt="药物递送" title="药物递送" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-088.webp" alt="药理" title="药理" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-089.webp" alt="营养" title="营养" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-090.webp" alt="蛋白质与多肽" title="蛋白质与多肽" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-091.webp" alt="血液" title="血液" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-092.webp" alt="诊断影像" title="诊断影像" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-093.webp" alt="转化医学" title="转化医学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-094.webp" alt="遗传学" title="遗传学" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-095.webp" alt="酶和生物催化" title="酶和生物催化" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-096.webp" alt="量准" title="量准" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-097.webp" alt="量子" title="量子" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-098.webp" alt="非常规油气田" title="非常规油气田" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-099.webp" alt="食品科技" title="食品科技" loading="lazy" decoding="async"></div>
+      <div class="logo-cell"><img src="assets/img/logos/logo-100.webp" alt="骨科" title="骨科" loading="lazy" decoding="async"></div>
+    </div>
+    <div class="logo-more reveal">
+      <button type="button" id="logoMoreBtn" onclick="toggleLogoWall(this)" aria-expanded="false"><span class="zh">查看更多品牌</span><span class="en">View More Brands</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 专家资源 ============ -->
+<section class="experts" id="experts">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag reveal" style="justify-content:center"><span class="zh">专家资源</span><span class="en">EXPERT NETWORK</span></div>
+      <h2 class="section-title reveal"><span class="zh">累计邀约逾六十位诺奖得主 · 逾十万名全球专家</span><span class="en">60+ Nobel Laureates · 100,000+ Global Experts</span></h2>
+      <div class="gold-line reveal"></div>
+      <p class="section-sub reveal"><span class="zh">以会议为平台开展专家寻访、邀约、撮合与人才引进——以下为曾受邀出席的品牌会议诺奖嘉宾代表。</span><span class="en">Sample Nobel laureate speakers from our brand conferences.</span></p>
+    </div>
+    <div class="exp-grid">
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/01-aaron-ciechanover.jpg" alt="Aaron Ciechanover" loading="lazy"></div><h4>Aaron Ciechanover</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2004</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/02-ada-e-yonath.jpg" alt="Ada E. Yonath" loading="lazy"></div><h4>Ada E. Yonath</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2009</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/03-akira-suzuki.jpg" alt="Akira Suzuki" loading="lazy"></div><h4>Akira Suzuki</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2010</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/04-arieh-warshel.jpg" alt="Arieh Warshel" loading="lazy"></div><h4>Arieh Warshel</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2013</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/05-avram-hershko.jpg" alt="Avram Hershko" loading="lazy"></div><h4>Avram Hershko</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2004</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/06-dan-shechtman.jpg" alt="Dan Shechtman" loading="lazy"></div><h4>Dan Shechtman</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2011</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/07-ei-ichi-negishi.jpg" alt="Ei-ichi Negishi" loading="lazy"></div><h4>Ei-ichi Negishi</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2010</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/08-johann-deisenhofer.jpg" alt="Johann Deisenhofer" loading="lazy"></div><h4>Johann Deisenhofer</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">1988</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/09-karl-barry-sharpless.jpg" alt="Karl Barry Sharpless" loading="lazy"></div><h4>Karl Barry Sharpless</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2001 / 2022</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/10-kurt-wuthrich.jpg" alt="Kurt Wüthrich" loading="lazy"></div><h4>Kurt Wüthrich</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2002</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/36-jean-marie-lehn.jpg" alt="Jean-Marie Lehn" loading="lazy"></div><h4>Jean-Marie Lehn</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">1987</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/12-michael-levitt.jpg" alt="Michael Levitt" loading="lazy"></div><h4>Michael Levitt</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2013</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/13-richard-robert-ernst.jpg" alt="Richard Robert Ernst" loading="lazy"></div><h4>Richard Robert Ernst</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">1991</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/14-robert-huber.jpg" alt="Robert Huber" loading="lazy"></div><h4>Robert Huber</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">1988</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/32-osamu-shimomura.jpg" alt="Osamu Shimomura" loading="lazy"></div><h4>Osamu Shimomura</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2008</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/33-rudolph-a-marcus.jpg" alt="Rudolph A. Marcus" loading="lazy"></div><h4>Rudolph A. Marcus</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">1992</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/34-thomas-a-steitz.jpg" alt="Thomas A. Steitz" loading="lazy"></div><h4>Thomas A. Steitz</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">2009</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/35-hartmut-michel.jpg" alt="Hartmut Michel" loading="lazy"></div><h4>Hartmut Michel</h4><div class="cat"><span class="zh">诺贝尔化学奖</span><span class="en">Nobel Chemistry</span></div><div class="name">1988</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/16-bruce-a-beutler.jpg" alt="Bruce A. Beutler" loading="lazy"></div><h4>Bruce A. Beutler</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2011</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/17-edvard-moser.jpg" alt="Edvard Moser" loading="lazy"></div><h4>Edvard Moser</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2014</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/18-erwin-neher.jpg" alt="Erwin Neher" loading="lazy"></div><h4>Erwin Neher</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">1991</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/19-harald-zur-hausen.jpg" alt="Harald zur Hausen" loading="lazy"></div><h4>Harald zur Hausen</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2008</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/20-j-robin-warren.jpg" alt="J. Robin Warren" loading="lazy"></div><h4>J. Robin Warren</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2005</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/21-luc-antoine-montagnier.jpg" alt="Luc Antoine Montagnier" loading="lazy"></div><h4>Luc Antoine Montagnier</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2008</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/22-thomas-c-sudhof.jpg" alt="Thomas C. Südhof" loading="lazy"></div><h4>Thomas C. Südhof</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2013</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/23-tim-hunt.jpg" alt="Tim Hunt" loading="lazy"></div><h4>Tim Hunt</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2001</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/24-yoshinori-ohsumi.jpg" alt="Yoshinori Ohsumi" loading="lazy"></div><h4>Yoshinori Ohsumi</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Medicine</span></div><div class="name">2016</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/37-phillip-a-sharp.jpg" alt="Phillip A. Sharp" loading="lazy"></div><h4>Phillip A. Sharp</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1993</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/38-ferid-murad.jpg" alt="Ferid Murad" loading="lazy"></div><h4>Ferid Murad</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1998</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/39-rolf-m-zinkernagel.jpg" alt="Rolf M. Zinkernagel" loading="lazy"></div><h4>Rolf M. Zinkernagel</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1996</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/40-gunter-blobel.jpg" alt="Günter Blobel" loading="lazy"></div><h4>Günter Blobel</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1999</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/41-martin-j-evans.jpg" alt="Martin J. Evans" loading="lazy"></div><h4>Martin J. Evans</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">2007</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/42-james-e-rothman.jpg" alt="James E. Rothman" loading="lazy"></div><h4>James E. Rothman</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">2013</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/43-michael-stuart-brown.jpg" alt="Michael Stuart Brown" loading="lazy"></div><h4>Michael Stuart Brown</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1985</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/44-richard-j-roberts.jpg" alt="Richard J. Roberts" loading="lazy"></div><h4>Richard J. Roberts</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1993</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/45-andrew-v-schally.jpg" alt="Andrew V. Schally" loading="lazy"></div><h4>Andrew V. Schally</h4><div class="cat"><span class="zh">诺贝尔生理学或医学奖</span><span class="en">Nobel Physiology or Medicine</span></div><div class="name">1977</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/25-george-fitzgerald-smoot.jpg" alt="George Fitzgerald Smoot" loading="lazy"></div><h4>George Fitzgerald Smoot</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2006</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/26-serge-haroche.jpg" alt="Serge Haroche" loading="lazy"></div><h4>Serge Haroche</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2012</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/27-shuji-nakamura.jpg" alt="Shuji Nakamura" loading="lazy"></div><h4>Shuji Nakamura</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2014</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/28-theodor-w-hansch.jpg" alt="Theodor W. Hänsch" loading="lazy"></div><h4>Theodor W. Hänsch</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2005</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/46-albert-fert.jpg" alt="Albert Fert" loading="lazy"></div><h4>Albert Fert</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2007</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/47-brian-d-josephson.jpg" alt="Brian D. Josephson" loading="lazy"></div><h4>Brian D. Josephson</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">1973</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/48-carlo-rubbia.jpg" alt="Carlo Rubbia" loading="lazy"></div><h4>Carlo Rubbia</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">1984</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/49-david-j-gross.jpg" alt="David J. Gross" loading="lazy"></div><h4>David J. Gross</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2004</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/50-robert-c-richardson.jpg" alt="Robert C. Richardson" loading="lazy"></div><h4>Robert C. Richardson</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">1996</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/51-andre-geim.jpg" alt="Andre Geim" loading="lazy"></div><h4>Andre Geim</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2010</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/52-konstantin-novoselov.jpg" alt="Konstantin Novoselov" loading="lazy"></div><h4>Konstantin Novoselov</h4><div class="cat"><span class="zh">诺贝尔物理学奖</span><span class="en">Nobel Physics</span></div><div class="name">2010</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/29-christopher-a-pissarides.jpg" alt="Christopher A. Pissarides" loading="lazy"></div><h4>Christopher A. Pissarides</h4><div class="cat"><span class="zh">诺贝尔经济学奖</span><span class="en">Nobel Economics</span></div><div class="name">2010</div></div>
+<div class="exp-card reveal"><div class="exp-avatar"><img src="assets/img/nobel/30-edward-prescott.jpg" alt="Edward Prescott" loading="lazy"></div><h4>Edward Prescott</h4><div class="cat"><span class="zh">诺贝尔经济学奖</span><span class="en">Nobel Economics</span></div><div class="name">2004</div></div>
+<div class="exp-card reveal d1"><div class="exp-avatar"><img src="assets/img/nobel/31-eric-maskin.jpg" alt="Eric Maskin" loading="lazy"></div><h4>Eric Maskin</h4><div class="cat"><span class="zh">诺贝尔经济学奖</span><span class="en">Nobel Economics</span></div><div class="name">2007</div></div>
+<div class="exp-card reveal d2"><div class="exp-avatar"><img src="assets/img/nobel/53-finn-kydland.jpg" alt="Finn Kydland" loading="lazy"></div><h4>Finn Kydland</h4><div class="cat"><span class="zh">诺贝尔经济学奖</span><span class="en">Nobel Economics</span></div><div class="name">2004</div></div>
+<div class="exp-card reveal d3"><div class="exp-avatar"><img src="assets/img/nobel/54-robert-a-mundell.jpg" alt="Robert A. Mundell" loading="lazy"></div><h4>Robert A. Mundell</h4><div class="cat"><span class="zh">诺贝尔经济学奖</span><span class="en">Nobel Economics</span></div><div class="name">1999</div></div>
+    </div>
+    <div class="exp-more reveal">
+      <button type="button" id="expMoreBtn" onclick="toggleExpGrid(this)" aria-expanded="false"><span class="zh">查看更多人员</span><span class="en">View More Experts</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 新闻资讯 ============ -->
+<section class="experts" id="news" style="background:var(--bg)">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag reveal" style="justify-content:center"><span class="zh">会议动态</span><span class="en">CONFERENCE NEWS</span></div>
+      <h2 class="section-title reveal"><span class="zh">会议动态与行业观察</span><span class="en">Conference News &amp; Insights</span></h2>
+      <div class="gold-line reveal"></div>
+    </div>
+    <div class="news-grid">
+      <div class="news-card reveal" onclick="openNews(0)"><div class="news-date"><b>08</b><span>2026.09</span></div><div class="news-body"><h4><span class="zh">格物泰克发布《会议生态升级与全球合作方案》，构建全链路服务生态</span><span class="en">Gowotex releases its Conference Ecosystem Upgrade &amp; Global Cooperation Framework</span></h4><p><span class="zh">以"以会聚人 · 以人引才 · 以才招商 · 以商成项"为主线，升级业务体系，形成"会议 × 数据 × 服务"生态收入结构。</span><span class="en">Nine synergized business lines form a conference-data-service ecosystem with growing non-event revenue.</span></p><div class="news-more"><span class="zh">阅读全文 →</span><span class="en">Read More →</span></div></div></div>
+      <div class="news-card reveal d1" onclick="openNews(1)"><div class="news-date"><b>08</b><span>2026.08</span></div><div class="news-body"><h4><span class="zh">国际生物医药产业发展大会筹备启动，聚焦出海与产业升级</span><span class="en">BID Congress planning kicks off on going-global themes</span></h4><p><span class="zh">第5届国际生物医药产业发展大会将在上海举行，围绕 AI 制药与国际化布局展开研讨。</span><span class="en">The 5th Biopharma Industry Congress will gather experts on AI-driven drug discovery and global expansion.</span></p><div class="news-more"><span class="zh">阅读全文 →</span><span class="en">Read More →</span></div></div></div>
+      <div class="news-card reveal d2" onclick="openNews(2)"><div class="news-date"><b>07</b><span>2026.07</span></div><div class="news-body"><h4><span class="zh">世界海洋大会 2027 筹备开启，聚焦海洋科技与可持续发展</span><span class="en">WCO 2027 planning begins, focusing on ocean tech and sustainability</span></h4><p><span class="zh">新一届世界海洋大会将赴葡萄牙里斯本举办，围绕海洋科学、水产渔业与海洋装备展开。</span><span class="en">The World Congress on Ocean heads to Lisbon, covering ocean science, fisheries and marine equipment.</span></p><div class="news-more"><span class="zh">阅读全文 →</span><span class="en">Read More →</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 联系我们 ============ -->
+<section id="contact">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag reveal" style="justify-content:center"><span class="zh">联系我们</span><span class="en">CONTACT US</span></div>
+      <h2 class="section-title reveal"><span class="zh">洽谈合作 · 共创国际合作新机遇</span><span class="en">Let's Create Global Opportunities Together</span></h2>
+      <div class="gold-line reveal"></div>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form reveal" id="contactForm" onsubmit="return submitForm(event)">
+        <div class="form-row">
+          <div class="form-group"><label><span class="zh">姓名 *</span><span class="en">Name *</span></label><input type="text" id="f-name" data-ph-zh="您的姓名 / Your Name" data-ph-en="Your Name" placeholder="您的姓名 / Your Name" required></div>
+          <div class="form-group"><label><span class="zh">联系电话 *</span><span class="en">Phone *</span></label><input type="tel" id="f-phone" data-ph-zh="手机 / 座机" data-ph-en="Phone" placeholder="手机 / 座机" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label><span class="zh">电子邮箱</span><span class="en">Email</span></label><input type="email" id="f-email" data-ph-zh="name@example.com" data-ph-en="name@example.com" placeholder="name@example.com"></div>
+          <div class="form-group"><label><span class="zh">单位名称</span><span class="en">Organization</span></label><input type="text" id="f-org" data-ph-zh="公司 / 机构 / 院校" data-ph-en="Company / Institute" placeholder="公司 / 机构 / 院校"></div>
+        </div>
+        <div class="form-group"><label><span class="zh">合作意向 *</span><span class="en">Interest *</span></label>
+          <select id="f-type" required>
+            <option value="" data-zh="请选择合作类型" data-en="Select a service">请选择合作类型</option>
+            <option data-zh="国际会议品牌" data-en="Conference Brands">国际会议品牌</option>
+            <option data-zh="国际人才引进服务" data-en="Global Talent Acquisition">国际人才引进服务</option>
+            <option data-zh="会议情报与行业媒体" data-en="Conference Intelligence & Media">会议情报与行业媒体</option>
+            <option data-zh="会议策划服务（B2B）" data-en="Conference Planning (B2B)">会议策划服务（B2B）</option>
+            <option data-zh="会议全案代运营" data-en="Full-Cycle Conference Operations">会议全案代运营</option>
+            <option data-zh="B2B/B2G 会议与展中会承办" data-en="B2B/B2G Conferences & Expo Forums">B2B/B2G 会议与展中会承办</option>
+            <option data-zh="演讲局与城市会展顾问服务" data-en="Speakers Bureau & City MICE Advisory">演讲局与城市会展顾问服务</option>
+            <option data-zh="政府招商服务" data-en="Investment Attraction">政府招商服务</option>
+            <option data-zh="国际项目对接服务" data-en="Global Project Matching">国际项目对接服务</option>
+            <option data-zh="其他合作" data-en="Others">其他合作</option>
+          </select>
+        </div>
+        <div class="form-group"><label><span class="zh">留言内容</span><span class="en">Message</span></label><textarea id="f-msg" data-ph-zh="请简要描述您的需求… / Please describe your needs" data-ph-en="Please describe your needs…" placeholder="请简要描述您的需求… / Please describe your needs"></textarea></div>
+        <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center"><span class="zh">提交合作咨询</span><span class="en">Submit Inquiry</span></button>
+      </form>
+      <div class="contact-info">
+        <div class="info-card reveal"><div class="ic">📍</div><div><h5><span class="zh">总部地址</span><span class="en">Headquarters</span></h5><p><span class="zh">大连高新技术产业园区火炬路43号<br>生命科学创新中心</span><span class="en">No.43 Huoju Road, Dalian Hi-tech Industrial Zone<br>Life Science Innovation Center</span></p></div></div>
+        <div class="info-card reveal d1"><div class="ic">📞</div><div><h5><span class="zh">联系电话</span><span class="en">Phone</span></h5><p>+86 411-8479-9609</p></div></div>
+        <div class="info-card reveal d2"><div class="ic">✉️</div><div><h5><span class="zh">商务邮箱</span><span class="en">Email</span></h5><p>sean@bitcongress.com</p></div></div>
+        <div class="info-card reveal d3"><div class="ic">🕐</div><div><h5><span class="zh">服务时间</span><span class="en">Service Hours</span></h5><p><span class="zh">周一至周五 8:30 – 17:30（北京时间）</span><span class="en">Mon–Fri 8:30–17:30 (CST)</span></p></div></div>
+        <div class="qr-wrap reveal d4"><img src="assets/img/code_qr.jpg" alt="官方微信二维码"><div><b><span class="zh">官方微信</span><span class="en">Official WeChat</span></b><span><span class="zh">扫码添加客服微信，获取一对一服务</span><span class="en">Scan to chat with our team</span></span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo-mark.jpg" alt="格物泰克">
+        <b><span class="zh">格物泰克商务会展（大连）有限公司</span><span class="en">Gowotex Business &amp; Exhibition (Dalian) Co., Ltd.</span></b>
+        <p><span class="zh">由百奥泰国际会议（BIT Congress）核心团队二次创业设立 —— 国际会议 · 国际人才 · 城市产业的全链路服务生态平台，以会聚人、以人引才、以才招商、以商成项。</span><span class="en">Founded by the core team of BIT Congress — a full-chain service ecosystem of conferences, talent and industry.</span></p>
+        <p style="margin-top:10px;color:var(--gold-2);font-family:var(--font-en);font-size:12px;letter-spacing:1px">gowotex.com</p>
+      </div>
+      <div class="foot-col">
+        <h5><span class="zh">快速导航</span><span class="en">Quick Links</span></h5>
+        <a href="#about"><span class="zh">关于我们</span><span class="en">About Us</span></a>
+        <a href="#services"><span class="zh">业务体系</span><span class="en">Business Systems</span></a>
+        <a href="#conferences"><span class="zh">品牌会议</span><span class="en">Conferences</span></a>
+        <a href="#experts"><span class="zh">专家资源</span><span class="en">Experts</span></a>
+        <a href="#news"><span class="zh">会议动态</span><span class="en">Conference News</span></a>
+        <a href="#contact"><span class="zh">联系我们</span><span class="en">Contact</span></a>
+      </div>
+      <div class="foot-col">
+        <h5><span class="zh">业务体系</span><span class="en">Services</span></h5>
+        <a href="#services"><span class="zh">国际会议品牌</span><span class="en">Conference Brands</span></a>
+        <a href="#services"><span class="zh">国际人才引进服务</span><span class="en">Talent Acquisition</span></a>
+        <a href="#services"><span class="zh">会议情报与行业媒体</span><span class="en">Conference Intelligence &amp; Media</span></a>
+        <a href="#services"><span class="zh">会议策划服务（B2B）</span><span class="en">Conference Planning (B2B)</span></a>
+        <a href="#services"><span class="zh">会议全案代运营</span><span class="en">Full-Cycle Operations</span></a>
+        <a href="#services"><span class="zh">B2B/B2G 会议与展中会</span><span class="en">B2B/B2G &amp; Expo Forums</span></a>
+        <a href="#services"><span class="zh">演讲局与城市会展顾问</span><span class="en">Speakers &amp; City MICE</span></a>
+        <a href="#services"><span class="zh">政府招商服务</span><span class="en">Investment Attraction</span></a>
+        <a href="#services"><span class="zh">国际项目对接服务</span><span class="en">Project Matching</span></a>
+      </div>
+      <div class="foot-col">
+        <h5><span class="zh">联系方式</span><span class="en">Contact</span></h5>
+        <p>📍 <span class="zh">大连高新技术产业园区火炬路43号</span><span class="en">No.43 Huoju Road, Dalian</span></p>
+        <p>📞 +86 411-8479-9609</p>
+        <p>✉️ sean@bitcongress.com</p>
+        <p>🕐 <span class="zh">周一至周五 8:30–17:30</span><span class="en">Mon–Fri 8:30–17:30</span></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 <span class="zh">格物泰克商务会展（大连）有限公司</span><span class="en">Gowotex Business &amp; Exhibition (Dalian) Co., Ltd.</span> All Rights Reserved.</span>
+      <span><span class="zh">本网站内容部分数据据 BIT Congress 官网公开资料（bitcongress.com）｜辽ICP备XXXXXXXX号（备案办理中）</span><span class="en">Some data per BIT Congress public materials (bitcongress.com) ｜ ICP License: Pending</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- 悬浮元素 -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
+<div class="fab">
+  <a class="mail" href="mailto:sean@bitcongress.com" title="商务邮箱">✉️</a>
+  <a class="wechat" href="javascript:void(0)" onclick="showWechat()" title="微信咨询">💬</a>
+</div>
+
+<!-- 新闻弹窗 -->
+<div class="modal" id="newsModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeNews()">✕</button>
+    <h3 id="mTitle">新闻标题</h3>
+    <div class="m-date" id="mDate">2026.09.01</div>
+    <div id="mBody">
+      <p>新闻内容占位。</p>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✅ <span id="toastMsg"><span class="zh">提交成功</span><span class="en">Submitted</span></span></div>
+
+<script>
+/* ============ 语言切换 ============ */
+var currentLang = 'zh';
+function setLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('.zh').forEach(function(el){el.style.display = lang==='zh' ? '' : 'none';});
+  document.querySelectorAll('.en').forEach(function(el){el.style.display = lang==='en' ? '' : 'none';});
+  document.querySelectorAll('.lang-switch button').forEach(function(btn){
+    btn.classList.toggle('active', (lang==='zh' && btn.textContent==='中') || (lang==='en' && btn.textContent==='EN'));
+  });
+  document.querySelectorAll('select option[data-zh]').forEach(function(o){
+    o.textContent = lang==='zh' ? o.dataset.zh : o.dataset.en;
+  });
+  document.querySelectorAll('[data-ph-zh]').forEach(function(el){
+    el.placeholder = lang==='zh' ? el.dataset.phZh : el.dataset.phEn;
+  });
+}
+setLang('zh');
+
+/* ============ 移动端菜单 ============ */
+function toggleMenu(){document.getElementById('mainNav').classList.toggle('open');}
+document.querySelectorAll('nav.main-nav a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('mainNav').classList.remove('open');});});
+
+/* ============ 头部滚动样式 ============ */
+window.addEventListener('scroll',function(){
+  var h = document.getElementById('header');
+  h.classList.toggle('scrolled', window.scrollY > 40);
+  document.getElementById('backTop').classList.toggle('show', window.scrollY > 600);
+});
+
+/* ============ 覆盖领域轮播 ============ */
+var fslides = document.querySelectorAll('.fc-slide');
+var fdotsWrap = document.getElementById('fieldDots');
+var fcur = 0, ftimer;
+fslides.forEach(function(_,i){
+  var d = document.createElement('button');
+  d.addEventListener('click',function(){goField(i);});
+  fdotsWrap.appendChild(d);
+});
+var fdots = fdotsWrap.querySelectorAll('button');
+function goField(i){
+  fcur = (i + fslides.length) % fslides.length;
+  fslides.forEach(function(s,idx){s.classList.toggle('active', idx===fcur);});
+  fdots.forEach(function(d,idx){d.classList.toggle('active', idx===fcur);});
+  var c = document.getElementById('fcCount');
+  if(c) c.textContent = ('0'+(fcur+1)).slice(-2) + ' / ' + ('0'+fslides.length).slice(-2);
+}
+function moveField(step){goField(fcur+step);frestart();}
+function frestart(){clearInterval(ftimer);ftimer = setInterval(function(){goField(fcur+1);},8000);}
+goField(0);frestart();
+
+/* ============ 滚动动画 ============ */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}
+  });
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+/* ============ 数字滚动 ============ */
+var cio = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(!e.isIntersecting) return;
+    var el = e.target, target = +el.dataset.target, start = null, dur = 1800;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts-start)/dur,1);
+      var eased = 1 - Math.pow(1-p,3);
+      el.textContent = Math.floor(target*eased).toLocaleString('en-US');
+      if(p<1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('en-US');
+    }
+    requestAnimationFrame(step);
+    cio.unobserve(el);
+  });
+},{threshold:.5});
+document.querySelectorAll('.count').forEach(function(el){cio.observe(el);});
+
+/* ============ 导航高亮 ============ */
+var sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll',function(){
+  var pos = window.scrollY + 120;
+  sections.forEach(function(sec){
+    if(pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight){
+      document.querySelectorAll('nav.main-nav a').forEach(function(a){
+        a.classList.toggle('active', a.getAttribute('href') === '#'+sec.id);
+      });
+    }
+  });
+});
+
+/* ============ 会议筛选 ============ */
+document.querySelectorAll('.conf-filter button').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.conf-filter button').forEach(function(b){b.classList.remove('active');});
+    btn.classList.add('active');
+    var f = btn.dataset.filter;
+    document.querySelectorAll('.conf-card').forEach(function(card){
+      var show = f==='all' || card.dataset.cat === f;
+      card.style.display = show ? '' : 'none';
+      if(show){card.classList.add('visible');}
+    });
+  });
+});
+
+/* ============ 表单提交 ============ */
+function submitForm(e){
+  e.preventDefault();
+  var name = document.getElementById('f-name').value.trim();
+  var phone = document.getElementById('f-phone').value.trim();
+  var type = document.getElementById('f-type').value;
+  if(!name || !phone || !type){showToast(currentLang==='zh'?'请填写必填项':'Please fill required fields');return false;}
+  showToast(currentLang==='zh'?'提交成功，我们将在1个工作日内与您联系':'Submitted! We will contact you within 1 business day');
+  document.getElementById('contactForm').reset();
+  return false;
+}
+var toastTimer;
+function showToast(msg){
+  var t = document.getElementById('toast');
+  document.getElementById('toastMsg').innerHTML = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function(){t.classList.remove('show');},3200);
+}
+
+/* ============ 新闻弹窗 ============ */
+var newsData = [
+  {title_zh:'格物泰克发布《会议生态升级与全球合作方案》，构建全链路服务生态',title_en:'Gowotex releases its Conference Ecosystem Upgrade & Global Cooperation Framework',date:'2026.09.08',zh:'格物泰克正式发布《会议生态升级与全球合作方案》（对外版）。公司由百奥泰国际会议（BIT Congress）核心团队二次创业设立，整体承接逾百个品牌会议、国际专家网络与办会方法论。方案以"以会聚人 · 以人引才 · 以才招商 · 以商成项"为主线，升级业务体系：国际会议品牌、国际人才引进服务、会议情报与行业媒体、会议策划服务（B2B）、会议全案代运营、B2B/B2G 会议与展中会承办、演讲局与城市会展顾问服务、政府招商服务、国际项目对接服务。各体系共享自有国际专家数据库（逾三千万名博士级高层次人才与专家）与作业体系，形成"会议 × 数据 × 服务"的生态收入结构。（历史业绩数据据 BIT Congress 官网公开资料 bitcongress.com）',en:'Gowotex releases its Conference Ecosystem Upgrade and Global Cooperation Framework. Founded by the core team of BIT Congress, the company inherits 100+ conference brands, a global expert network and proven methodologies. Its business systems — international conference brands, global talent acquisition, conference intelligence and media, conference planning (B2B), full-cycle conference operations, B2B/B2G conferences and expo forums, speakers bureau and city MICE advisory, investment attraction, and global project matching — share one proprietary database of 30+ million PhD-level experts, forming a self-reinforcing conference-data-service ecosystem. (Legacy data per BIT Congress public materials: bitcongress.com)'},
+  {title_zh:'国际生物医药产业发展大会筹备启动，聚焦出海与产业升级',title_en:'BID Congress planning kicks off on going-global themes',date:'2026.08.20',zh:'第5届国际生物医药产业发展大会筹备工作正式启动，大会将在上海举行，围绕生物医药出海、AI 制药与产业升级等热点议题展开深入研讨。大会将汇聚全球生物医药领域的专家、企业家与投资机构，搭建产业国际合作的高端平台。',en:'Planning for the 5th International Biopharma Industry Congress has begun. The congress will be held in Shanghai, focusing on going-global strategies, AI-driven drug discovery and industrial upgrading, gathering experts, entrepreneurs and investors worldwide.'},
+  {title_zh:'世界海洋大会 2027 筹备开启，聚焦海洋科技与可持续发展',title_en:'WCO 2027 planning begins, focusing on ocean tech and sustainability',date:'2026.07.15',zh:'世界海洋大会新一届会议将于2027年10月在葡萄牙里斯本举行，围绕海洋科学、水产渔业、海洋装备与可持续发展等方向展开。大会将邀请全球海洋领域知名专家，推动海洋科技的跨国合作与产业化对接。',en:'The next World Congress on Ocean will be held in Lisbon, Portugal in October 2027, covering ocean science, fisheries, marine equipment and sustainability, promoting cross-border cooperation and industrialization.'}
+];
+function openNews(i){
+  var d = newsData[i];
+  document.getElementById('mTitle').textContent = currentLang==='zh' ? d.title_zh : d.title_en;
+  document.getElementById('mDate').textContent = d.date;
+  document.getElementById('mBody').innerHTML = '<p>' + (currentLang==='zh'?d.zh:d.en) + '</p>';
+  document.getElementById('newsModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeNews(){
+  document.getElementById('newsModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('newsModal').addEventListener('click',function(e){if(e.target===this)closeNews();});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeNews();});
+
+/* ============ 微信悬浮提示 ============ */
+function showWechat(){
+  showToast(currentLang==='zh'?'请扫描页尾二维码添加官方微信':'Scan the QR code in the contact section');
+  document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+}
+
+/* ============ 品牌 logo 墙：查看更多品牌 ============ */
+function toggleLogoWall(btn){
+  var wall=document.querySelector('.logo-wall');
+  if(!wall) return;
+  var open=wall.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open?'true':'false');
+  var zh=btn.querySelector('.zh'), en=btn.querySelector('.en');
+  if(zh) zh.textContent = open?'收起':'查看更多品牌';
+  if(en) en.textContent = open?'Show Less':'View More Brands';
+  if(!open){ var sec=document.getElementById('conferences'); if(sec) sec.scrollIntoView({behavior:'smooth'}); }
+}
+
+/* ============ 专家卡片：查看更多人员 ============ */
+function toggleExpGrid(btn){
+  var grid=document.querySelector('.exp-grid');
+  if(!grid) return;
+  var open=grid.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open?'true':'false');
+  var zh=btn.querySelector('.zh'), en=btn.querySelector('.en');
+  if(zh) zh.textContent = open?'收起':'查看更多人员';
+  if(en) en.textContent = open?'Show Less':'View More Experts';
+  if(!open){ var sec=document.getElementById('experts'); if(sec) sec.scrollIntoView({behavior:'smooth'}); }
+}
+</script>
+</body>
+</html>
